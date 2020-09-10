@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+   Simple Gallery in html/jquery with bootstrap and lazyload
+   Permission is hereby granted, free of charge, to any person
+   obtaining a copy of this software.
+   @reynauddaniel
+-->
+<html>
+   <head>
+      <title>Simple Gallery</title>
+      <script src='assets/js/jquery-11.0.min.js'></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/lazyload.js"></script>
+      <link rel="stylesheet" href="assets/css/bootstrap.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="icon" type="image/png" href="assets/media/icons/favicon.png" />
+   </head>
+   <body>
+      <div class="container">
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+         <h1 class="display-4">Simple Gallery</h1>
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-8">
+                  <p>In bootstrap 3.3.0, Jquery 1.11.0<br/>And Lazyload 2.2.0</p>
+               </div>
+               <div class="col-lg-4">
+                  <!-- song in autoplay, feel free to remove it -->
+                  <audio controls loop src="assets/media/sounds/undertale.mp3">
+                     Your browser does not support the
+                     <code>audio</code> element.
+                  </audio>
+               </div>
+            </div>
+         </div>
+         <hr class="my-4">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-2">
+                  <img class="lazyload" data-src="assets/media/images/rabbit.png" >
+               </div>
+               <div class="col-lg-8">
+                  <p>
+                     This fuzz ball is wise,</br>
+                     It cares about you and your well being.
+                     It makes you want to scroll down and enjoy some more pictures !
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <section>
+         <div class="container">
+
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+               <div class="box">
+                  <a href="#" data-toggle="modal" data-target="#0"> <img class="lazyload" data-src="assets/media/images/img1.png" > </a>
+                  <div class="modal fade" id="0" tabindex="-1" role="dialog">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                           <div class="modal-body"> <img class="lazyload" data-src="assets/media/images/img1.png" > </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+               <div class="box">
+                  <a href="#" data-toggle="modal" data-target="#1"> <img class="lazyload" data-src="assets/media/images/img2.png" > </a>
+                  <div class="modal fade" id="1" tabindex="-1" role="dialog">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                           <div class="modal-body"> <img class="lazyload" data-src="media/images/img2.png" > </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+               <div class="box">
+                  <a href="#" data-toggle="modal" data-target="#2"> <img class="lazyload" data-src="assets/media/images/img3.png" > </a>
+                  <div class="modal fade" id="2" tabindex="-1" role="dialog">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                           <div class="modal-body"> <img class="lazyload" data-src="assets/media/images/img3.png" > </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+         <hr class="my-4">
+
+         <!-- videos -->
+         <div class="container">
+
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+               <div align="center" class="embed-responsive embed-responsive-16by9">
+                  <video controls class="embed-responsive-item">
+                     <source src="assets/media/videos/vid1.webm" type="video/webm">
+                  </video>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+               <div align="center" class="embed-responsive embed-responsive-16by9">
+                  <video controls class="embed-responsive-item">
+                     <source src="assets/media/videos/vid2.mp4" type="video/mp4">
+                  </video>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+               <div align="center" class="embed-responsive embed-responsive-16by9">
+                  <video controls class="embed-responsive-item">
+                     <source src="assets/media/videos/vid3.mp4" type="video/mp4">
+                  </video>
+               </div>
+            </div>
+
+         </div>
+      </section>
+   </body>
+   <script>
+      lazyload();
+   </script>
+</html>
